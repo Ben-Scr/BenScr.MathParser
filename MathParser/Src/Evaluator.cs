@@ -65,6 +65,8 @@ namespace BenScr.Math.Parser
 
         public void DefineConsoleFunctions()
         {
+            SetVariable("credits", "Ben-Scr");
+            SetVariable("git", "https://github.com/Ben-Scr/MathParser");
             SetVariable("app", new Value(Environment.ProcessPath ?? AppContext.BaseDirectory));
             Define("clear", a => { Console.Clear(); return new Value("Calculator"); });
             Define("quit", a => { Environment.Exit(0); return Value.Null; });
