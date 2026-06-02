@@ -1,4 +1,4 @@
-using BenScr.Math.Parser;
+using BenScr.MathParser;
 using System.Text;
 
 public static class Program
@@ -8,6 +8,7 @@ public static class Program
     public static void Main(string[] args)
     {
         Evaluator evaluator = Evaluator.CreateCalculator();
+        evaluator.DefineDefaultFunctions();
 
         Console.InputEncoding = Encoding.UTF8;
         Console.OutputEncoding = Encoding.UTF8;
