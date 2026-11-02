@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Existing release tag (nuget/v1.0.0)
+        description: Existing release tag (packages/BenScr.MathParser/1.0.0)
         required: true
         type: string
 permissions:
@@ -20,7 +20,7 @@ jobs:
         env:
           RELEASE_TAG: ${{ inputs.tag }}
         run: |
-          if ($env:RELEASE_TAG -ne 'nuget/v1.0.0') { throw 'Expected nuget/v1.0.0.' }
+          if ($env:RELEASE_TAG -ne 'packages/BenScr.MathParser/1.0.0') { throw 'Expected packages/BenScr.MathParser/1.0.0.' }
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           ref: ${{ inputs.tag }}

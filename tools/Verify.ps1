@@ -14,7 +14,7 @@ try {
     if ($ReleaseTag) {
         $tagCommit = & git rev-list -n 1 $ReleaseTag
         if ($LASTEXITCODE -ne 0 -or $tagCommit -ne $commit) { throw 'Release tag does not identify HEAD.' }
-        if ($ReleaseTag -ne 'nuget/v1.0.0') { throw 'Tag does not match package version.' }
+        if ($ReleaseTag -ne 'packages/BenScr.MathParser/1.0.0') { throw 'Tag does not match package version.' }
     }
     if (-not (Test-Path -LiteralPath 'docs/PublicApi.txt')) { throw 'Reviewed public API baseline is missing.' }
     $runId = [Guid]::NewGuid().ToString('N')
@@ -55,6 +55,7 @@ try {
     <packageSource key="sdk-packs">
       <package pattern="Microsoft.NETCore.App.Ref" />
       <package pattern="Microsoft.AspNetCore.App.Ref" />
+      <package pattern="Microsoft.WindowsDesktop.App.Ref" />
       <package pattern="Microsoft.NETCore.App.Host.*" />
     </packageSource>
   </packageSourceMapping>

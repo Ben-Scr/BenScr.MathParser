@@ -8,7 +8,7 @@ The generated release-manifest.json identifies exact artifact hashes, source com
 From the tagged, clean checkout:
 
 ```powershell
-pwsh -File tools/Verify.ps1 -ReleaseTag nuget/v1.0.0
+pwsh -File tools/Verify.ps1 -ReleaseTag packages/BenScr.MathParser/1.0.0
 $artifactDirectory = (Get-Content artifacts/latest-verification.txt).Trim()
 # Supply a suitably scoped NuGet API key through NUGET_API_KEY, never in a committed file.
 pwsh -File tools/Publish.ps1 -ArtifactDirectory $artifactDirectory
@@ -19,7 +19,7 @@ It pushes only the exact named 1.0.0 package and its adjacent, hash-checked symb
 Do not rebuild after verification without verifying the new artifacts again.
 NuGet package IDs are not reserved by this preparation.
 
-The source tag nuget/v1.0.0 must point to the manifest commit in the public repository.
+The source tag packages/BenScr.MathParser/1.0.0 must point to the manifest commit in the public repository.
 After package acceptance, create the corresponding GitHub release for that existing tag,
 attaching the exact nupkg, snupkg and release-manifest.json. Never move a released tag.
 
@@ -34,7 +34,7 @@ A policy/credential is an external publishing prerequisite; none is claimed to h
 The workflow obtains a short-lived key through NuGet/login and passes it only through the environment.
 No additional approval environment is introduced.
 
-Dispatch the workflow with tag nuget/v1.0.0. It rebuilds and fully verifies its own artifacts before pushing those same bytes.
+Dispatch the workflow with tag packages/BenScr.MathParser/1.0.0. It rebuilds and fully verifies its own artifacts before pushing those same bytes.
 
 ## Verify the published package
 
@@ -53,7 +53,7 @@ NuGet submission and indexing are separate states. After indexing:
 Expected future package page: https://www.nuget.org/packages/BenScr.MathParser/1.0.0.
 It is not evidence of an existing publication.
 
-The earlier v1.0.0 tag is preserved as the initial local validation candidate. Its first Ubuntu CI run found
-that isolated consumer restore also needs Microsoft reference packs. The corrected release is tagged nuget/v1.0.0;
+The earlier v1.0.0 and nuget/v1.0.0 tags are preserved as validation candidates. Fresh CI runners found
+that isolated consumer restore also needs Microsoft reference packs, including WindowsDesktop on Windows. The corrected release is tagged packages/BenScr.MathParser/1.0.0;
 no published package or historical tag is replaced. The consumer source mapping confines BenScr.MathParser to
 the verified local feed and permits only named Microsoft SDK packs from nuget.org.

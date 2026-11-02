@@ -101,7 +101,7 @@ The full verifier requires a clean checkout. It checks formatting, builds/tests 
 reviewed public API baseline, runs the example, packs, checks archive metadata and PDB/source checksums,
 and executes fresh consumers outside the repository using only the new package and an empty cache.
 Artifact paths and hashes are in artifacts/latest-verification.txt and the selected release-manifest.json.
-Use -ReleaseTag nuget/v1.0.0 for a tagged release candidate.
+Use -ReleaseTag packages/BenScr.MathParser/1.0.0 for a tagged release candidate.
 
 Windows x64 has been executed locally. CI covers Windows and Ubuntu x64; remote run results are separate evidence.
 Other operating systems/architectures, trimming and native AOT are not release-tested promises.

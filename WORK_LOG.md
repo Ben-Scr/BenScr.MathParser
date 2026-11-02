@@ -34,3 +34,7 @@ Fresh Ubuntu CI exposed missing Microsoft reference/host packs in the isolated c
 101 tests per target and package audits had passed. Added package source mapping: BenScr.MathParser is local-only;
 only Microsoft.NETCore.App.Ref, Microsoft.AspNetCore.App.Ref and Microsoft.NETCore.App.Host.* may use nuget.org.
 Preserved the initial v1.0.0 candidate tag and use nuget/v1.0.0 for the corrected final release definition.
+
+Ubuntu CI then passed end to end. Windows additionally required Microsoft.WindowsDesktop.App.Ref;
+added this exact SDK package mapping. No package source is permitted to supply a remote BenScr.MathParser.
+The final release tag is packages/BenScr.MathParser/1.0.0; earlier validation tags remain untouched.
