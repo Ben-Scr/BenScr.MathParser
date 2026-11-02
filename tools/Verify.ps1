@@ -14,7 +14,7 @@ try {
     if ($ReleaseTag) {
         $tagCommit = & git rev-list -n 1 $ReleaseTag
         if ($LASTEXITCODE -ne 0 -or $tagCommit -ne $commit) { throw 'Release tag does not identify HEAD.' }
-        if ($ReleaseTag -ne 'v1.0.0') { throw 'Tag does not match package version.' }
+        if ($ReleaseTag -ne 'nuget/v1.0.0') { throw 'Tag does not match package version.' }
     }
     if (-not (Test-Path -LiteralPath 'docs/PublicApi.txt')) { throw 'Reviewed public API baseline is missing.' }
     $runId = [Guid]::NewGuid().ToString('N')
@@ -36,7 +36,7 @@ try {
     $symbols = Join-Path $output 'BenScr.MathParser.1.0.0.snupkg'
     Invoke-DotNet run --project tools/PackageAudit -c Release --no-build -- package $package $symbols $commit $projectRoot
 
-    # The consumers are outside the checkout and restore from a single local feed with a fresh cache.
+    # The library comes only from the local feed. A fresh cache may need Microsoft's SDK reference packs.
     $consumerRoot = Join-Path ([IO.Path]::GetTempPath()) "benscr-mathparser-$runId"
     New-Item -ItemType Directory -Path $consumerRoot -Force | Out-Null
     Copy-Item -LiteralPath global.json -Destination $consumerRoot
@@ -45,7 +45,19 @@ try {
     $escapedCache = [Security.SecurityElement]::Escape((Join-Path $consumerRoot 'packages'))
     @"
 <configuration>
-  <packageSources><clear /><add key="verified-local" value="$escapedFeed" /></packageSources>
+  <packageSources>
+    <clear />
+    <add key="verified-local" value="$escapedFeed" />
+    <add key="sdk-packs" value="https://api.nuget.org/v3/index.json" />
+  </packageSources>
+  <packageSourceMapping>
+    <packageSource key="verified-local"><package pattern="BenScr.MathParser" /></packageSource>
+    <packageSource key="sdk-packs">
+      <package pattern="Microsoft.NETCore.App.Ref" />
+      <package pattern="Microsoft.AspNetCore.App.Ref" />
+      <package pattern="Microsoft.NETCore.App.Host.*" />
+    </packageSource>
+  </packageSourceMapping>
   <fallbackPackageFolders><clear /></fallbackPackageFolders>
   <config><add key="globalPackagesFolder" value="$escapedCache" /></config>
 </configuration>

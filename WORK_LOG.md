@@ -29,3 +29,8 @@ Icon visual QA passed at 32/128 CSS pixels on light/dark backgrounds using the e
 Full pre-commit verification completed: both targets, 101/101 tests each, API checks, examples, archive checks,
 and consumers in an external temporary directory with a new cache and a local-only NuGet feed.
 The final committed candidate is reverified independently and receives its own release manifest and hashes.
+
+Fresh Ubuntu CI exposed missing Microsoft reference/host packs in the isolated consumer cache after all
+101 tests per target and package audits had passed. Added package source mapping: BenScr.MathParser is local-only;
+only Microsoft.NETCore.App.Ref, Microsoft.AspNetCore.App.Ref and Microsoft.NETCore.App.Host.* may use nuget.org.
+Preserved the initial v1.0.0 candidate tag and use nuget/v1.0.0 for the corrected final release definition.
