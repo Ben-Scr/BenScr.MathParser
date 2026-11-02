@@ -1,11 +1,24 @@
 # Release 1.0.0
 
-This repository prepares BenScr.MathParser for publication. No NuGet package has been pushed by this task.
-The generated release-manifest.json identifies exact artifact hashes, source commit, tag, tests and consumers.
+The user subsequently requested publication. On 2026-11-02, the exact verified package and symbols were
+submitted to NuGet under ben.scr. NuGet validation and indexing are pending.
 
-## Verify and publish the existing artifacts
+- Package: https://www.nuget.org/packages/BenScr.MathParser/1.0.0
+- Source commit: 50779d5071e0ef4c0ca9c147d0c097cf18d01e9f
+- Immutable tag: packages/BenScr.MathParser/1.0.0
+- GitHub release and exact artifacts: https://github.com/Ben-Scr/BenScr.MathParser/releases/tag/packages/BenScr.MathParser/1.0.0
+- Successful Windows and Ubuntu CI: https://github.com/Ben-Scr/BenScr.MathParser/actions/runs/41497373390
+- nupkg SHA-256: df0341e3cfd6c73a7cabdb99dc179ce78eee185642a32e33e23c2b61ea5434ea
+- snupkg SHA-256: ca0f665b18a2299edb3411bcf2a68eb75d43dbde49df0b70492fd0b990bfa4ee
 
-From the tagged, clean checkout:
+The 1.0.0 artifacts are frozen at that commit. Later documentation updates do not change the released
+package or move its tag. The package's embedded README retains the wording from its verified candidate.
+The generated release-manifest.json records exact artifact hashes, source commit, tag, tests and consumers.
+
+## Historical verification and publishing procedure
+
+The following describes the original candidate procedure. Do not republish or rebuild 1.0.0 for upload.
+Future versions need updated metadata, their own tag and a fresh verification. From a tagged, clean checkout:
 
 ```powershell
 pwsh -File tools/Verify.ps1 -ReleaseTag packages/BenScr.MathParser/1.0.0
@@ -17,7 +30,7 @@ pwsh -File tools/Publish.ps1 -ArtifactDirectory $artifactDirectory
 Publish.ps1 refuses dirty sources, mismatched tags/hashes, an unpublished source tag or an already-existing target ID/version.
 It pushes only the exact named 1.0.0 package and its adjacent, hash-checked symbol package.
 Do not rebuild after verification without verifying the new artifacts again.
-NuGet package IDs are not reserved by this preparation.
+The completed 1.0.0 submission used NuGet's web upload for both archives; no API key was created or stored.
 
 The source tag packages/BenScr.MathParser/1.0.0 must point to the manifest commit in the public repository.
 After package acceptance, create the corresponding GitHub release for that existing tag,
@@ -34,7 +47,8 @@ A policy/credential is an external publishing prerequisite; none is claimed to h
 The workflow obtains a short-lived key through NuGet/login and passes it only through the environment.
 No additional approval environment is introduced.
 
-Dispatch the workflow with tag packages/BenScr.MathParser/1.0.0. It rebuilds and fully verifies its own artifacts before pushing those same bytes.
+For a future release, dispatch the workflow with that version's new tag. It rebuilds and fully verifies its
+own artifacts before pushing those same bytes. Do not dispatch it for the already submitted 1.0.0.
 
 ## Verify the published package
 
@@ -47,11 +61,12 @@ NuGet submission and indexing are separate states. After indexing:
    restore with --no-cache and the new package cache, and run both targets.
 4. Check the fetched package's README, original license, icon hash, target assemblies and repository commit.
    NuGet signing may alter the ZIP hash; compare entry payloads and metadata with the tested local archive.
-5. Verify source stepping and the rendered NuGet icon, then record package URL and CI URL and change the
-   release record to published_verified only after these checks succeed.
+5. Download the matching portable PDBs from NuGet's symbol server, compare their bytes with the verified
+   symbol archive and verify Source Link source checksums. Inspect the rendered NuGet icon. Record package
+   and CI URLs, and change the release record to published_verified only after these checks succeed.
+   Record interactive debugger stepping separately if it is performed.
 
-Expected future package page: https://www.nuget.org/packages/BenScr.MathParser/1.0.0.
-It is not evidence of an existing publication.
+Submission has been confirmed on the package page. Public-feed consumer verification is pending indexing.
 
 The earlier v1.0.0 and nuget/v1.0.0 tags are preserved as validation candidates. Fresh CI runners found
 that isolated consumer restore also needs Microsoft reference packs, including WindowsDesktop on Windows. The corrected release is tagged packages/BenScr.MathParser/1.0.0;

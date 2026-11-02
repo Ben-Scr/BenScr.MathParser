@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "family": "mathparser",
-  "scope": "one C# family; ready to publish; NuGet publication deferred by user",
+  "scope": "one C# family; NuGet publication explicitly requested after preparation",
   "source": {
     "repository": "https://github.com/Ben-Scr/MathParser",
     "branch": "master",
@@ -35,7 +35,7 @@
     "unchanged": true
   },
   "instructions": "../../AGENTS.md (central BenScr root; no per-library copy)",
-  "status": "tested_local",
+  "status": "published_verification_pending",
   "initial_tests": {
     "net9": 101,
     "net10": 101,
@@ -43,11 +43,23 @@
     "skipped": 0
   },
   "release_evidence": "artifacts/latest-verification.txt -> immutable verification run directory/release-manifest.json",
-  "published": false,
+  "published": true,
+  "publication": {
+    "package_url": "https://www.nuget.org/packages/BenScr.MathParser/1.0.0",
+    "commit": "50779d5071e0ef4c0ca9c147d0c097cf18d01e9f",
+    "release_tag": "packages/BenScr.MathParser/1.0.0",
+    "release_url": "https://github.com/Ben-Scr/BenScr.MathParser/releases/tag/packages/BenScr.MathParser/1.0.0",
+    "github_artifact_hashes_verified": true,
+    "method": "NuGet web upload under ben.scr",
+    "symbols_submitted": true,
+    "public_feed_consumer": "pending_indexing",
+    "interactive_debugger_stepping": "not_executed",
+    "ci_url": "https://github.com/Ben-Scr/BenScr.MathParser/actions/runs/41497373390",
+    "ci_platforms_passed": ["windows-latest", "ubuntu-latest"]
+  },
   "excluded": [
     "Other catalog families",
-    "C++ migration",
-    "NuGet publication"
+    "C++ migration"
   ],
-  "final_status_source": "Use the generated release-manifest.json for the exact committed release candidate."
+  "final_status_source": "Use the release-manifest.json attached to the GitHub release for final publication evidence."
 }

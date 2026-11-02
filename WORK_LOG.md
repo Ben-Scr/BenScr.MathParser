@@ -1,6 +1,7 @@
 # Work log — 2026-11-02
 
-Scope: one C# package, ready to publish; NuGet publication is deferred by the user's latest instruction.
+Initial scope: one C# package, ready to publish. The user subsequently requested publication;
+the publication record below supersedes the initial preparation-only scope.
 
 Completed inventory: verified Ben-Scr GitHub identity and source repository ownership, live MathParserCS 1.0.7 owner,
 actual legacy DLL API, source master/commit, .NET target, dependencies and license.
@@ -38,3 +39,11 @@ Preserved the initial v1.0.0 candidate tag and use nuget/v1.0.0 for the correcte
 Ubuntu CI then passed end to end. Windows additionally required Microsoft.WindowsDesktop.App.Ref;
 added this exact SDK package mapping. No package source is permitted to supply a remote BenScr.MathParser.
 The final release tag is packages/BenScr.MathParser/1.0.0; earlier validation tags remain untouched.
+
+Publication: authenticated by the user as ben.scr in NuGet, then submitted the exact nupkg and snupkg
+from artifacts/final. Both web uploads were confirmed successful. No API key was created or stored,
+and no Trusted Publishing policy was configured. NuGet validation/indexing and the public-feed consumer
+check are pending. The release commit is 50779d5071e0ef4c0ca9c147d0c097cf18d01e9f; successful CI on
+Windows and Ubuntu is https://github.com/Ben-Scr/BenScr.MathParser/actions/runs/41497373390.
+The GitHub release for the existing final tag contains the exact nupkg and snupkg plus a release manifest
+without local machine paths. GitHub's asset SHA-256 digests match the local verified archives.

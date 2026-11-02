@@ -14,13 +14,13 @@ string money = Calculator.Evaluate<string>("2$ + 5$");   // "7.00$" in en-US
 
 ## Installation
 
-Version 1.0.0 is prepared for publication. For the local candidate:
+[BenScr.MathParser 1.0.0 on NuGet](https://www.nuget.org/packages/BenScr.MathParser/1.0.0):
 
 ```sh
-dotnet add package BenScr.MathParser --version 1.0.0 --source <verified-artifact-directory>
+dotnet add package BenScr.MathParser --version 1.0.0
 ```
 
-After publication, omit the source argument. Do not install this alongside MathParserCS without reviewing [migration notes](MIGRATION.md).
+Review the [migration notes](https://github.com/Ben-Scr/BenScr.MathParser/blob/master/MIGRATION.md) before replacing MathParserCS.
 
 ## Sessions and custom functions
 
@@ -103,12 +103,15 @@ and executes fresh consumers outside the repository using only the new package a
 Artifact paths and hashes are in artifacts/latest-verification.txt and the selected release-manifest.json.
 Use -ReleaseTag packages/BenScr.MathParser/1.0.0 for a tagged release candidate.
 
-Windows x64 has been executed locally. CI covers Windows and Ubuntu x64; remote run results are separate evidence.
+Windows and Ubuntu x64 passed [release CI](https://github.com/Ben-Scr/BenScr.MathParser/actions/runs/41497373390),
+including 101 tests per framework and isolated package consumers.
 Other operating systems/architectures, trimming and native AOT are not release-tested promises.
 
 ## Release and provenance
 
-See [RELEASE.md](RELEASE.md), [MIGRATION.md](MIGRATION.md), [CHANGELOG.md](CHANGELOG.md),
-and [docs/PROVENANCE.md](docs/PROVENANCE.md).
+See [release evidence](https://github.com/Ben-Scr/BenScr.MathParser/blob/master/RELEASE.md),
+[migration notes](https://github.com/Ben-Scr/BenScr.MathParser/blob/master/MIGRATION.md),
+[changelog](https://github.com/Ben-Scr/BenScr.MathParser/blob/master/CHANGELOG.md),
+and [provenance](https://github.com/Ben-Scr/BenScr.MathParser/blob/master/docs/PROVENANCE.md).
 The original author license is preserved in LICENSE.txt and embedded in the package.
 The supplied BenScr logo is embedded byte-for-byte, with its original master in branding/.
