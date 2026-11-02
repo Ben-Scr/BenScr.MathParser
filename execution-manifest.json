@@ -34,7 +34,6 @@
     "sha256": "a5dcabceb766e13c1840a95130ee98a458e12e3713fd9b07f3ceae75a1f5b993",
     "unchanged": true
   },
-  "instructions": "../../AGENTS.md (central BenScr root; no per-library copy)",
   "status": "published_verified",
   "initial_tests": {
     "net9": 101,

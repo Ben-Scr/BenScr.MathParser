@@ -22,7 +22,7 @@ Created by Ben Schneider — https://github.com/Ben-Scr
 
 ## Branding
 
-The master PNG is copied unchanged from the user-provided BenScr_Agent_Pack.
+The master PNG is the original BenScr brand asset, preserved unchanged.
 SHA-256: a5dcabceb766e13c1840a95130ee98a458e12e3713fd9b07f3ceae75a1f5b993.
 Dimensions 1254 × 1254, RGBA, 795819 bytes. The exact same bytes are packed as icon.png.
 No asset resampling, cleanup, recoloring or generated replacement is used.
@@ -30,9 +30,9 @@ The QA page tools/IconPreview.html displays the packaged icon at 32 and 128 CSS 
 
 ## Scope decision
 
-The latest request narrows the broad Agent Pack to one C# library ready to publish.
-Other catalog families and C++ are outside this run. No NuGet push, legacy deprecation, repository deletion
-or visibility change is performed. WORK_LOG.md and execution-manifest.json track the actual state.
+This repository contains the C# expression parser family. BenScr.MathParser 1.0.0 is published on NuGet;
+RELEASE.md records its immutable source commit and verification evidence. Legacy packages and source
+repositories are preserved. WORK_LOG.md and execution-manifest.json track the release state.
 
 ## Technical references
 

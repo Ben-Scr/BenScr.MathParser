@@ -20,7 +20,6 @@ TRX files and isolated consumer output. These generated records contain the exac
 so they are intentionally outside their own source commit. artifacts/latest-verification.txt identifies the latest completed run.
 Remote CI results and final source-link reachability are recorded in the final handoff, separately from configuration.
 
-User correction: AGENTS.md lives at the BenScr parent root. Removed per-library agent/convention duplicates.
 Solutions are ignored; all verification uses tracked .csproj files directly. Replaced the broad legacy gitignore with focused rules.
 
 Archive audit passed for both frameworks: identity/version/commit, no runtime dependencies, README/license,
