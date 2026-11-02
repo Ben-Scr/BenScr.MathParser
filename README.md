@@ -1,83 +1,114 @@
-# MathParser
+# BenScr.MathParser
 
-A small C# math parser for expressions like `20 + 100 / 2 * 4^2`.
+A small, extensible C# expression parser for .NET 9 and .NET 10, with no runtime package dependencies.
 
-## Features
+Created by Ben Schneider — https://github.com/Ben-Scr
 
-- Parses arithmetic expressions with operator precedence
-- Supports functions like `pow`, `sin`, `cos`, `sqrt`, `clamp`
-- Supports predefined variables like `pi`, `π`, `e`, and `ans`
-- Supports currency expressions like `2$ + 5$`
-- Accepts localized decimal separators such as `1,5` and `1.5`
-- Offers a simple stateless API and a configurable evaluator API
+```csharp
+using BenScr.MathParser;
+
+double result = Calculator.Evaluate("20 + 100 / 2 * 4^2"); // 820
+double power = Calculator.Evaluate("2^3^2");              // 512
+string money = Calculator.Evaluate<string>("2$ + 5$");   // "7.00$" in en-US
+```
 
 ## Installation
 
-```bash
-dotnet add package MathParserCS
+Version 1.0.0 is prepared for publication. For the local candidate:
+
+```sh
+dotnet add package BenScr.MathParser --version 1.0.0 --source <verified-artifact-directory>
 ```
 
-## Simple Usage
+After publication, omit the source argument. Do not install this alongside MathParserCS without reviewing [migration notes](MIGRATION.md).
+
+## Sessions and custom functions
 
 ```csharp
-using BenScr.Math.Parser;
+Evaluator session = Evaluator.CreateCalculator();
+session.SetVariable("x", new Value(21d));
+session.Define("twice", 1, values => new Value(values[0].To<double>() * 2));
 
-double result = Calculator.Evaluate("20 + 100 / 2 * 4^2");
-Console.WriteLine(result); // 820
+Value answer = ParserRuntime.RunOrThrow("twice(x)", session); // 42
+Value next = ParserRuntime.RunOrThrow("ans + 1", session);     // 43
 
-string currency = Calculator.Evaluate<string>("2$ + 5$");
-Console.WriteLine(currency); // 7.00$ / 7,00$ depending on culture
-```
-
-`Calculator` is stateless, so each call is independent.
-
-## Configurable Usage
-
-```csharp
-using BenScr.Math.Parser;
-
-Evaluator evaluator = Evaluator.CreateCalculator();
-
-if (ParserRuntime.TryRun("pow(4;2) + ans", evaluator, out Value value, out string? error))
+if (!ParserRuntime.TryRun("1 +", session, out Value value, out string? error))
 {
-    Console.WriteLine(value);
-}
-else
-{
-    Console.WriteLine(error);
+    Console.WriteLine(error); // Unexpected token EOF at position 3.
 }
 ```
 
-Use a shared `Evaluator` when you want session-style behavior like `ans`.
+A new Evaluator is empty. CreateCalculator registers arithmetic and mathematical functions.
+Define replaces an existing function; DefineVariadic specifies a minimum argument count.
+GetVariables and GetFunctions return shallow snapshots.
+Callbacks are caller-owned, run synchronously, and may have side effects. They are not sandboxed.
 
-## Supported Built-ins
+## Expression contract
 
-- Variables: `ans`, `pi`, `π`, `e`
-- Operators: `+`, `-`, `*`, `/`, `%`, `^`, unary `+`, unary `-`, `√`
-- Functions: `max`, `min`, `pow`, `sin`, `cos`, `tan`, `log`, `abs`, `atan`, `atan2`, `clamp`, `sqrt`
+| Feature | Behavior |
+| --- | --- |
+| Numbers | ASCII decimal digits; dot or comma as decimal separator, independent of culture. No grouping separators or scientific notation. |
+| Operators | +, -, *, /, %, ^, prefix + and -, prefix √, postfix $ and €. |
+| Precedence, strongest first | Currency suffix; unary operators; power; multiplication/division/remainder; addition/subtraction. |
+| Associativity | Power is right-associative; other binary operators are left-associative. |
+| Historical unary behavior | -2^2 is 4; 2^-2 is 0.25. Use -(2^2) for -4. |
+| Arguments | Semicolon-separated: pow(2;8). |
+| Names | Case-sensitive; letters or underscore followed by letters, digits or underscores. |
+| Constants | pi, π, e. ans starts at zero and changes only after successful session evaluation. |
+| Functions | max, min (one or more arguments); pow, atan2 (two); clamp (three); sin, cos, tan, log, abs, atan, sqrt (one). |
+| Mathematics | Double precision, radians, natural logarithm. IEEE 754 NaN/infinity propagate. min/max propagate NaN regardless of position. |
+| Strings | Double-quoted literals; no escape syntax or string concatenation. |
+| Currency | Approximate numeric values with display labels; no exchange-rate calculation or decimal financial arithmetic. Mixed labels retain the first label. |
+| Conversion | Value.To follows Convert.ChangeType with current culture; integer conversions round ties to even. Already compatible objects are returned directly. |
+| Formatting | Current culture. Currency uses N2 followed by the symbol, including culture-specific grouping. |
 
-Function arguments are separated with `;`, for example `pow(2;8)`.
+The immutable supported currency set and decimal syntax cannot be globally changed.
+There is no implicit multiplication: write 2*pi, not 2pi.
+String-to-number conversions inside built-in functions use the current culture.
 
-## Error Handling
+## Errors and limits
 
-```csharp
-using BenScr.Math.Parser;
+Calculator rejects null with ArgumentNullException and empty/whitespace input with ArgumentException.
+ParserRuntime treats empty input as a syntax error; null arguments remain programming errors.
 
-Evaluator evaluator = Evaluator.CreateCalculator();
-Value value = ParserRuntime.Run("1 +", evaluator);
-Console.WriteLine(value); // Error: ...
+MathParseException exposes Position, a zero-based UTF-16 source offset; EOF uses the input length.
+ExpressionEvaluationException identifies unknown names, incorrect argument counts, or invalid built-in conversions/ranges.
+TryRun returns false for these two exception types; Run returns an "Error: " string Value.
+Unrelated custom callback exceptions propagate through all APIs. A callback can deliberately throw
+ExpressionEvaluationException to report a recoverable expression error.
+
+Input is limited to 16,384 UTF-16 code units. Parser recursion and syntax-tree depth are each limited to 128.
+Limits are inclusive. A flat left-associative chain can reach the tree limit even without parentheses.
+The limits bound parser-owned work; caller-provided callbacks and objects control their own resource use.
+No cancellation, execution timeout, AOT, trimming or allocation-free guarantee is made.
+
+Calculator and Lexer calls are independent and support concurrent use.
+A shared Evaluator or Parser requires external synchronization; borrowed objects and callbacks keep their own contracts.
+Syntax tree records remain public for compatibility. CallExpr.Args is a mutable, borrowed list.
+
+## Build and verify
+
+Requirements: SDK 10.0.303, .NET 9 and 10 runtimes, Git, and PowerShell 7. The SDK is pinned in global.json.
+NUnit is retained from the source project; exact package versions and transitive locks are checked in.
+
+```powershell
+dotnet restore tests/BenScr.MathParser.Tests.csproj --locked-mode
+dotnet test tests/BenScr.MathParser.Tests.csproj -c Release --no-restore
+pwsh -File tools/Verify.ps1
 ```
 
-If you prefer exceptions, use `ParserRuntime.RunOrThrow(...)`.
+The full verifier requires a clean checkout. It checks formatting, builds/tests both frameworks, compares the
+reviewed public API baseline, runs the example, packs, checks archive metadata and PDB/source checksums,
+and executes fresh consumers outside the repository using only the new package and an empty cache.
+Artifact paths and hashes are in artifacts/latest-verification.txt and the selected release-manifest.json.
+Use -ReleaseTag v1.0.0 for a tagged release candidate.
 
-## Example Expressions
+Windows x64 has been executed locally. CI covers Windows and Ubuntu x64; remote run results are separate evidence.
+Other operating systems/architectures, trimming and native AOT are not release-tested promises.
 
-- `1 + 5` -> `6`
-- `pow(4;2)` -> `16`
-- `3 + 5 % 2` -> `4`
-- `2$ + 5$` -> `7.00$` / `7,00$`
-- `sqrt(81)` -> `9`
+## Release and provenance
 
-## Playground
-
-The repository includes a small console playground in `Playground/Program.cs`.
+See [RELEASE.md](RELEASE.md), [MIGRATION.md](MIGRATION.md), [CHANGELOG.md](CHANGELOG.md),
+and [docs/PROVENANCE.md](docs/PROVENANCE.md).
+The original author license is preserved in LICENSE.txt and embedded in the package.
+The supplied BenScr logo is embedded byte-for-byte, with its original master in branding/.

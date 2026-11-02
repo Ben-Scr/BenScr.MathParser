@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "family": "mathparser",
+  "scope": "one C# family; ready to publish; NuGet publication deferred by user",
+  "source": {
+    "repository": "https://github.com/Ben-Scr/MathParser",
+    "branch": "master",
+    "commit": "2d35f9ec1c92913884e0151a9467393a4d88f535",
+    "package": "MathParserCS",
+    "version": "1.0.7",
+    "package_owner": "ben.scr",
+    "source_owner": "Ben-Scr",
+    "ownership_verified": true,
+    "history_retained": true,
+    "package_sha256": "3a07621748f9881ecc7b2efe207f8fe619182b45fb42c0f14e0ce960d847c37d"
+  },
+  "target": {
+    "repository": "https://github.com/Ben-Scr/BenScr.MathParser",
+    "branch": "master",
+    "package": "BenScr.MathParser",
+    "version": "1.0.0",
+    "frameworks": [
+      "net9.0",
+      "net10.0"
+    ],
+    "runtime_dependencies": []
+  },
+  "api_inventory": "docs/PublicApi.txt",
+  "legacy_api_inventory": "docs/LegacyPublicApi.txt",
+  "api_mapping": "docs/api-migration.json",
+  "license": "LICENSE.txt (unchanged custom author license)",
+  "branding": {
+    "path": "branding/BenScr_Icon_Master.png",
+    "sha256": "a5dcabceb766e13c1840a95130ee98a458e12e3713fd9b07f3ceae75a1f5b993",
+    "unchanged": true
+  },
+  "instructions": "../../AGENTS.md (central BenScr root; no per-library copy)",
+  "status": "tested_local",
+  "initial_tests": {
+    "net9": 101,
+    "net10": 101,
+    "failed": 0,
+    "skipped": 0
+  },
+  "release_evidence": "artifacts/latest-verification.txt -> immutable verification run directory/release-manifest.json",
+  "published": false,
+  "excluded": [
+    "Other catalog families",
+    "C++ migration",
+    "NuGet publication"
+  ],
+  "final_status_source": "Use the generated release-manifest.json for the exact committed release candidate."
+}

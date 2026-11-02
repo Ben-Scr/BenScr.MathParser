@@ -1,0 +1,53 @@
+name: Publish verified release
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing release tag (v1.0.0)
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Validate tag input
+        shell: pwsh
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          if ($env:RELEASE_TAG -ne 'v1.0.0') { throw 'Expected v1.0.0.' }
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: ${{ inputs.tag }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+        with:
+          dotnet-version: |
+            9.0.315
+            10.0.303
+      - name: Build and verify the release artifacts
+        shell: pwsh
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: ./tools/Verify.ps1 -ReleaseTag $env:RELEASE_TAG
+      - name: Obtain a short-lived NuGet key
+        uses: NuGet/login@ebc737b6fc418a6ca0073cf116ec8dc156d8b81e # v1
+        id: login
+        with:
+          user: ben.scr
+      - name: Publish exactly the verified artifacts
+        shell: pwsh
+        env:
+          NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+        run: ./tools/Publish.ps1 -ArtifactDirectory (Get-Content artifacts/latest-verification.txt).Trim()
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: release-evidence
+          path: artifacts/verification-*/

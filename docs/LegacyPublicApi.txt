@@ -1,0 +1,190 @@
+BenScr.Math.Parser.BinaryExpr : BenScr.Math.Parser.Expr
+  Constructor Void .ctor(BenScr.Math.Parser.TokenType, BenScr.Math.Parser.Expr, BenScr.Math.Parser.Expr)
+  Method BenScr.Math.Parser.BinaryExpr <Clone>$()
+  Method BenScr.Math.Parser.Expr get_Left()
+  Method BenScr.Math.Parser.Expr get_Right()
+  Method BenScr.Math.Parser.TokenType get_Op()
+  Method Boolean Equals(BenScr.Math.Parser.BinaryExpr)
+  Method Boolean Equals(BenScr.Math.Parser.Expr)
+  Method Boolean Equals(System.Object)
+  Method Boolean op_Equality(BenScr.Math.Parser.BinaryExpr, BenScr.Math.Parser.BinaryExpr)
+  Method Boolean op_Inequality(BenScr.Math.Parser.BinaryExpr, BenScr.Math.Parser.BinaryExpr)
+  Method Int32 GetHashCode()
+  Method System.String ToString()
+  Method Void Deconstruct(BenScr.Math.Parser.TokenType ByRef, BenScr.Math.Parser.Expr ByRef, BenScr.Math.Parser.Expr ByRef)
+  Method Void set_Left(BenScr.Math.Parser.Expr)
+  Method Void set_Op(BenScr.Math.Parser.TokenType)
+  Method Void set_Right(BenScr.Math.Parser.Expr)
+  Property BenScr.Math.Parser.Expr Left
+  Property BenScr.Math.Parser.Expr Right
+  Property BenScr.Math.Parser.TokenType Op
+BenScr.Math.Parser.Calculator : System.Object
+  Method Double Evaluate(System.String)
+  Method T Evaluate[T](System.String)
+BenScr.Math.Parser.CallExpr : BenScr.Math.Parser.Expr
+  Constructor Void .ctor(System.String, System.Collections.Generic.List`1[BenScr.Math.Parser.Expr])
+  Method BenScr.Math.Parser.CallExpr <Clone>$()
+  Method Boolean Equals(BenScr.Math.Parser.CallExpr)
+  Method Boolean Equals(BenScr.Math.Parser.Expr)
+  Method Boolean Equals(System.Object)
+  Method Boolean op_Equality(BenScr.Math.Parser.CallExpr, BenScr.Math.Parser.CallExpr)
+  Method Boolean op_Inequality(BenScr.Math.Parser.CallExpr, BenScr.Math.Parser.CallExpr)
+  Method Int32 GetHashCode()
+  Method System.Collections.Generic.List`1[BenScr.Math.Parser.Expr] get_Args()
+  Method System.String ToString()
+  Method System.String get_CallName()
+  Method Void Deconstruct(System.String ByRef, System.Collections.Generic.List`1[BenScr.Math.Parser.Expr] ByRef)
+  Method Void set_Args(System.Collections.Generic.List`1[BenScr.Math.Parser.Expr])
+  Method Void set_CallName(System.String)
+  Property System.Collections.Generic.List`1[BenScr.Math.Parser.Expr] Args
+  Property System.String CallName
+BenScr.Math.Parser.CurrencyAmount : System.ValueType
+  Constructor Void .ctor(Double, System.String)
+  Method Boolean Equals(BenScr.Math.Parser.CurrencyAmount)
+  Method Boolean Equals(System.Object)
+  Method Boolean op_Equality(BenScr.Math.Parser.CurrencyAmount, BenScr.Math.Parser.CurrencyAmount)
+  Method Boolean op_Inequality(BenScr.Math.Parser.CurrencyAmount, BenScr.Math.Parser.CurrencyAmount)
+  Method Double get_Amount()
+  Method Int32 GetHashCode()
+  Method System.String ToString()
+  Method System.String get_Symbol()
+  Method Void Deconstruct(Double ByRef, System.String ByRef)
+  Method Void set_Amount(Double)
+  Method Void set_Symbol(System.String)
+  Property Double Amount
+  Property System.String Symbol
+BenScr.Math.Parser.Evaluator : System.Object
+  Constructor Void .ctor()
+  Method BenScr.Math.Parser.Evaluator Calculator()
+  Method System.Collections.Generic.Dictionary`2[System.String,BenScr.Math.Parser.Value] GetVariables()
+  Method System.Collections.Generic.Dictionary`2[System.String,System.Func`2[BenScr.Math.Parser.Value[],BenScr.Math.Parser.Value]] GetFunctions()
+  Method Void Define(System.String, System.Func`2[BenScr.Math.Parser.Value[],BenScr.Math.Parser.Value])
+  Method Void DefineArithmetikOperations()
+  Method Void DefineDefaultFunctions()
+  Method Void DefineMathematicalFunctions()
+  Method Void SetVariable(System.String, BenScr.Math.Parser.Value)
+BenScr.Math.Parser.Expr : System.Object
+  Method BenScr.Math.Parser.Expr <Clone>$()
+  Method Boolean Equals(BenScr.Math.Parser.Expr)
+  Method Boolean Equals(System.Object)
+  Method Boolean op_Equality(BenScr.Math.Parser.Expr, BenScr.Math.Parser.Expr)
+  Method Boolean op_Inequality(BenScr.Math.Parser.Expr, BenScr.Math.Parser.Expr)
+  Method Int32 GetHashCode()
+  Method System.String ToString()
+BenScr.Math.Parser.Lexer : System.Object
+  Field Char FloatingPointSeparator
+  Field System.Collections.Generic.HashSet`1[System.Char] Currencies
+  Method Char get_OppositeFloatingPointSeparator()
+  Method System.Collections.Generic.List`1[BenScr.Math.Parser.Token] BuildTokens(System.String)
+  Property Char OppositeFloatingPointSeparator
+BenScr.Math.Parser.MoneyExpr : BenScr.Math.Parser.Expr
+  Constructor Void .ctor(BenScr.Math.Parser.Expr, System.String)
+  Method BenScr.Math.Parser.Expr get_Left()
+  Method BenScr.Math.Parser.MoneyExpr <Clone>$()
+  Method Boolean Equals(BenScr.Math.Parser.Expr)
+  Method Boolean Equals(BenScr.Math.Parser.MoneyExpr)
+  Method Boolean Equals(System.Object)
+  Method Boolean op_Equality(BenScr.Math.Parser.MoneyExpr, BenScr.Math.Parser.MoneyExpr)
+  Method Boolean op_Inequality(BenScr.Math.Parser.MoneyExpr, BenScr.Math.Parser.MoneyExpr)
+  Method Int32 GetHashCode()
+  Method System.String ToString()
+  Method System.String get_Lexeme()
+  Method Void Deconstruct(BenScr.Math.Parser.Expr ByRef, System.String ByRef)
+  Method Void set_Left(BenScr.Math.Parser.Expr)
+  Method Void set_Lexeme(System.String)
+  Property BenScr.Math.Parser.Expr Left
+  Property System.String Lexeme
+BenScr.Math.Parser.NumberExpr : BenScr.Math.Parser.Expr
+  Constructor Void .ctor(Double)
+  Method BenScr.Math.Parser.NumberExpr <Clone>$()
+  Method Boolean Equals(BenScr.Math.Parser.Expr)
+  Method Boolean Equals(BenScr.Math.Parser.NumberExpr)
+  Method Boolean Equals(System.Object)
+  Method Boolean op_Equality(BenScr.Math.Parser.NumberExpr, BenScr.Math.Parser.NumberExpr)
+  Method Boolean op_Inequality(BenScr.Math.Parser.NumberExpr, BenScr.Math.Parser.NumberExpr)
+  Method Double get_Value()
+  Method Int32 GetHashCode()
+  Method System.String ToString()
+  Method Void Deconstruct(Double ByRef)
+  Method Void set_Value(Double)
+  Property Double Value
+BenScr.Math.Parser.Parser : System.Object
+  Constructor Void .ctor(System.Collections.Generic.List`1[BenScr.Math.Parser.Token])
+  Method BenScr.Math.Parser.Expr ParseExpression(Int32)
+BenScr.Math.Parser.ParserRuntime : System.Object
+  Method BenScr.Math.Parser.Value Run(System.String, BenScr.Math.Parser.Evaluator)
+BenScr.Math.Parser.StringExpr : BenScr.Math.Parser.Expr
+  Constructor Void .ctor(System.String)
+  Method BenScr.Math.Parser.StringExpr <Clone>$()
+  Method Boolean Equals(BenScr.Math.Parser.Expr)
+  Method Boolean Equals(BenScr.Math.Parser.StringExpr)
+  Method Boolean Equals(System.Object)
+  Method Boolean op_Equality(BenScr.Math.Parser.StringExpr, BenScr.Math.Parser.StringExpr)
+  Method Boolean op_Inequality(BenScr.Math.Parser.StringExpr, BenScr.Math.Parser.StringExpr)
+  Method Int32 GetHashCode()
+  Method System.String ToString()
+  Method System.String get_Value()
+  Method Void Deconstruct(System.String ByRef)
+  Method Void set_Value(System.String)
+  Property System.String Value
+BenScr.Math.Parser.Token : System.ValueType
+  Constructor Void .ctor(BenScr.Math.Parser.TokenType, System.String, Int32)
+  Field BenScr.Math.Parser.TokenType Type
+  Field Int32 Pos
+  Field System.String Lexeme
+  Method System.String ToString()
+BenScr.Math.Parser.TokenType : System.Enum
+  Field BenScr.Math.Parser.TokenType Caret
+  Field BenScr.Math.Parser.TokenType Currency
+  Field BenScr.Math.Parser.TokenType EOF
+  Field BenScr.Math.Parser.TokenType Ident
+  Field BenScr.Math.Parser.TokenType LParen
+  Field BenScr.Math.Parser.TokenType Minus
+  Field BenScr.Math.Parser.TokenType Modulo
+  Field BenScr.Math.Parser.TokenType Number
+  Field BenScr.Math.Parser.TokenType Plus
+  Field BenScr.Math.Parser.TokenType RParen
+  Field BenScr.Math.Parser.TokenType Seperator
+  Field BenScr.Math.Parser.TokenType Slash
+  Field BenScr.Math.Parser.TokenType Sqrt
+  Field BenScr.Math.Parser.TokenType Star
+  Field BenScr.Math.Parser.TokenType String
+  Field Int32 value__
+BenScr.Math.Parser.UnaryExpr : BenScr.Math.Parser.Expr
+  Constructor Void .ctor(BenScr.Math.Parser.TokenType, BenScr.Math.Parser.Expr)
+  Method BenScr.Math.Parser.Expr get_Right()
+  Method BenScr.Math.Parser.TokenType get_Op()
+  Method BenScr.Math.Parser.UnaryExpr <Clone>$()
+  Method Boolean Equals(BenScr.Math.Parser.Expr)
+  Method Boolean Equals(BenScr.Math.Parser.UnaryExpr)
+  Method Boolean Equals(System.Object)
+  Method Boolean op_Equality(BenScr.Math.Parser.UnaryExpr, BenScr.Math.Parser.UnaryExpr)
+  Method Boolean op_Inequality(BenScr.Math.Parser.UnaryExpr, BenScr.Math.Parser.UnaryExpr)
+  Method Int32 GetHashCode()
+  Method System.String ToString()
+  Method Void Deconstruct(BenScr.Math.Parser.TokenType ByRef, BenScr.Math.Parser.Expr ByRef)
+  Method Void set_Op(BenScr.Math.Parser.TokenType)
+  Method Void set_Right(BenScr.Math.Parser.Expr)
+  Property BenScr.Math.Parser.Expr Right
+  Property BenScr.Math.Parser.TokenType Op
+BenScr.Math.Parser.Value : System.ValueType
+  Constructor Void .ctor(System.Object)
+  Field BenScr.Math.Parser.Value Null
+  Method System.Object get_Object()
+  Method System.String ToString()
+  Method T To[T]()
+  Property System.Object Object
+BenScr.Math.Parser.VarExpr : BenScr.Math.Parser.Expr
+  Constructor Void .ctor(System.String)
+  Method BenScr.Math.Parser.VarExpr <Clone>$()
+  Method Boolean Equals(BenScr.Math.Parser.Expr)
+  Method Boolean Equals(BenScr.Math.Parser.VarExpr)
+  Method Boolean Equals(System.Object)
+  Method Boolean op_Equality(BenScr.Math.Parser.VarExpr, BenScr.Math.Parser.VarExpr)
+  Method Boolean op_Inequality(BenScr.Math.Parser.VarExpr, BenScr.Math.Parser.VarExpr)
+  Method Int32 GetHashCode()
+  Method System.String ToString()
+  Method System.String get_Name()
+  Method Void Deconstruct(System.String ByRef)
+  Method Void set_Name(System.String)
+  Property System.String Name

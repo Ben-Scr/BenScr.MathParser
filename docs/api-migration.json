@@ -1,0 +1,1044 @@
+{
+  "source_package": "MathParserCS",
+  "source_version": "1.0.7",
+  "members": [
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Constructor Void .ctor(BenScr.Math.Parser.TokenType, BenScr.Math.Parser.Expr, BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method BenScr.Math.Parser.BinaryExpr <Clone>$()",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method BenScr.Math.Parser.Expr get_Left()",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method BenScr.Math.Parser.Expr get_Right()",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method BenScr.Math.Parser.TokenType get_Op()",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.BinaryExpr)",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method Boolean Equals(System.Object)",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method Boolean op_Equality(BenScr.Math.Parser.BinaryExpr, BenScr.Math.Parser.BinaryExpr)",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method Boolean op_Inequality(BenScr.Math.Parser.BinaryExpr, BenScr.Math.Parser.BinaryExpr)",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method Int32 GetHashCode()",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method Void Deconstruct(BenScr.Math.Parser.TokenType ByRef, BenScr.Math.Parser.Expr ByRef, BenScr.Math.Parser.Expr ByRef)",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method Void set_Left(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method Void set_Op(BenScr.Math.Parser.TokenType)",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Method Void set_Right(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Property BenScr.Math.Parser.Expr Left",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Property BenScr.Math.Parser.Expr Right",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.BinaryExpr",
+      "legacy_member": "Property BenScr.Math.Parser.TokenType Op",
+      "target_type": "BenScr.MathParser.BinaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Calculator",
+      "legacy_member": "Method Double Evaluate(System.String)",
+      "target_type": "BenScr.MathParser.Calculator",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Calculator",
+      "legacy_member": "Method T Evaluate[T](System.String)",
+      "target_type": "BenScr.MathParser.Calculator",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Constructor Void .ctor(System.String, System.Collections.Generic.List`1[BenScr.Math.Parser.Expr])",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method BenScr.Math.Parser.CallExpr <Clone>$()",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.CallExpr)",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method Boolean Equals(System.Object)",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method Boolean op_Equality(BenScr.Math.Parser.CallExpr, BenScr.Math.Parser.CallExpr)",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method Boolean op_Inequality(BenScr.Math.Parser.CallExpr, BenScr.Math.Parser.CallExpr)",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method Int32 GetHashCode()",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method System.Collections.Generic.List`1[BenScr.Math.Parser.Expr] get_Args()",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method System.String get_CallName()",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method Void Deconstruct(System.String ByRef, System.Collections.Generic.List`1[BenScr.Math.Parser.Expr] ByRef)",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method Void set_Args(System.Collections.Generic.List`1[BenScr.Math.Parser.Expr])",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Method Void set_CallName(System.String)",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Property System.Collections.Generic.List`1[BenScr.Math.Parser.Expr] Args",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CallExpr",
+      "legacy_member": "Property System.String CallName",
+      "target_type": "BenScr.MathParser.CallExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Constructor Void .ctor(Double, System.String)",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.CurrencyAmount)",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method Boolean Equals(System.Object)",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method Boolean op_Equality(BenScr.Math.Parser.CurrencyAmount, BenScr.Math.Parser.CurrencyAmount)",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method Boolean op_Inequality(BenScr.Math.Parser.CurrencyAmount, BenScr.Math.Parser.CurrencyAmount)",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method Double get_Amount()",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method Int32 GetHashCode()",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method System.String get_Symbol()",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method Void Deconstruct(Double ByRef, System.String ByRef)",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method Void set_Amount(Double)",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Method Void set_Symbol(System.String)",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Property Double Amount",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.CurrencyAmount",
+      "legacy_member": "Property System.String Symbol",
+      "target_type": "BenScr.MathParser.CurrencyAmount",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Evaluator",
+      "legacy_member": "Constructor Void .ctor()",
+      "target_type": "BenScr.MathParser.Evaluator",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Evaluator",
+      "legacy_member": "Method BenScr.Math.Parser.Evaluator Calculator()",
+      "target_type": "BenScr.MathParser.Evaluator",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Evaluator",
+      "legacy_member": "Method System.Collections.Generic.Dictionary`2[System.String,BenScr.Math.Parser.Value] GetVariables()",
+      "target_type": "BenScr.MathParser.Evaluator",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Evaluator",
+      "legacy_member": "Method System.Collections.Generic.Dictionary`2[System.String,System.Func`2[BenScr.Math.Parser.Value[],BenScr.Math.Parser.Value]] GetFunctions()",
+      "target_type": "BenScr.MathParser.Evaluator",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Evaluator",
+      "legacy_member": "Method Void Define(System.String, System.Func`2[BenScr.Math.Parser.Value[],BenScr.Math.Parser.Value])",
+      "target_type": "BenScr.MathParser.Evaluator",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Evaluator",
+      "legacy_member": "Method Void DefineArithmetikOperations()",
+      "target_type": "BenScr.MathParser.Evaluator",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Evaluator",
+      "legacy_member": "Method Void DefineDefaultFunctions()",
+      "target_type": "BenScr.MathParser.Evaluator",
+      "disposition": "removed_host_console_commands_see_MIGRATION"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Evaluator",
+      "legacy_member": "Method Void DefineMathematicalFunctions()",
+      "target_type": "BenScr.MathParser.Evaluator",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Evaluator",
+      "legacy_member": "Method Void SetVariable(System.String, BenScr.Math.Parser.Value)",
+      "target_type": "BenScr.MathParser.Evaluator",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Expr",
+      "legacy_member": "Method BenScr.Math.Parser.Expr <Clone>$()",
+      "target_type": "BenScr.MathParser.Expr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Expr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.Expr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Expr",
+      "legacy_member": "Method Boolean Equals(System.Object)",
+      "target_type": "BenScr.MathParser.Expr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Expr",
+      "legacy_member": "Method Boolean op_Equality(BenScr.Math.Parser.Expr, BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.Expr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Expr",
+      "legacy_member": "Method Boolean op_Inequality(BenScr.Math.Parser.Expr, BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.Expr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Expr",
+      "legacy_member": "Method Int32 GetHashCode()",
+      "target_type": "BenScr.MathParser.Expr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Expr",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.Expr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Lexer",
+      "legacy_member": "Field Char FloatingPointSeparator",
+      "target_type": "BenScr.MathParser.Lexer",
+      "disposition": "replaced_with_readonly_property"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Lexer",
+      "legacy_member": "Field System.Collections.Generic.HashSet`1[System.Char] Currencies",
+      "target_type": "BenScr.MathParser.Lexer",
+      "disposition": "replaced_with_immutable_IReadOnlySet_property"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Lexer",
+      "legacy_member": "Method Char get_OppositeFloatingPointSeparator()",
+      "target_type": "BenScr.MathParser.Lexer",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Lexer",
+      "legacy_member": "Method System.Collections.Generic.List`1[BenScr.Math.Parser.Token] BuildTokens(System.String)",
+      "target_type": "BenScr.MathParser.Lexer",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Lexer",
+      "legacy_member": "Property Char OppositeFloatingPointSeparator",
+      "target_type": "BenScr.MathParser.Lexer",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Constructor Void .ctor(BenScr.Math.Parser.Expr, System.String)",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method BenScr.Math.Parser.Expr get_Left()",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method BenScr.Math.Parser.MoneyExpr <Clone>$()",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.MoneyExpr)",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method Boolean Equals(System.Object)",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method Boolean op_Equality(BenScr.Math.Parser.MoneyExpr, BenScr.Math.Parser.MoneyExpr)",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method Boolean op_Inequality(BenScr.Math.Parser.MoneyExpr, BenScr.Math.Parser.MoneyExpr)",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method Int32 GetHashCode()",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method System.String get_Lexeme()",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method Void Deconstruct(BenScr.Math.Parser.Expr ByRef, System.String ByRef)",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method Void set_Left(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Method Void set_Lexeme(System.String)",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Property BenScr.Math.Parser.Expr Left",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.MoneyExpr",
+      "legacy_member": "Property System.String Lexeme",
+      "target_type": "BenScr.MathParser.MoneyExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Constructor Void .ctor(Double)",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method BenScr.Math.Parser.NumberExpr <Clone>$()",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.NumberExpr)",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method Boolean Equals(System.Object)",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method Boolean op_Equality(BenScr.Math.Parser.NumberExpr, BenScr.Math.Parser.NumberExpr)",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method Boolean op_Inequality(BenScr.Math.Parser.NumberExpr, BenScr.Math.Parser.NumberExpr)",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method Double get_Value()",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method Int32 GetHashCode()",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method Void Deconstruct(Double ByRef)",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Method Void set_Value(Double)",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.NumberExpr",
+      "legacy_member": "Property Double Value",
+      "target_type": "BenScr.MathParser.NumberExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Parser",
+      "legacy_member": "Constructor Void .ctor(System.Collections.Generic.List`1[BenScr.Math.Parser.Token])",
+      "target_type": "BenScr.MathParser.Parser",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Parser",
+      "legacy_member": "Method BenScr.Math.Parser.Expr ParseExpression(Int32)",
+      "target_type": "BenScr.MathParser.Parser",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.ParserRuntime",
+      "legacy_member": "Method BenScr.Math.Parser.Value Run(System.String, BenScr.Math.Parser.Evaluator)",
+      "target_type": "BenScr.MathParser.ParserRuntime",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Constructor Void .ctor(System.String)",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method BenScr.Math.Parser.StringExpr <Clone>$()",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.StringExpr)",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method Boolean Equals(System.Object)",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method Boolean op_Equality(BenScr.Math.Parser.StringExpr, BenScr.Math.Parser.StringExpr)",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method Boolean op_Inequality(BenScr.Math.Parser.StringExpr, BenScr.Math.Parser.StringExpr)",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method Int32 GetHashCode()",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method System.String get_Value()",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method Void Deconstruct(System.String ByRef)",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Method Void set_Value(System.String)",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.StringExpr",
+      "legacy_member": "Property System.String Value",
+      "target_type": "BenScr.MathParser.StringExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Token",
+      "legacy_member": "Constructor Void .ctor(BenScr.Math.Parser.TokenType, System.String, Int32)",
+      "target_type": "BenScr.MathParser.Token",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Token",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Type",
+      "target_type": "BenScr.MathParser.Token",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Token",
+      "legacy_member": "Field Int32 Pos",
+      "target_type": "BenScr.MathParser.Token",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Token",
+      "legacy_member": "Field System.String Lexeme",
+      "target_type": "BenScr.MathParser.Token",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Token",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.Token",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Caret",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Currency",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType EOF",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Ident",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType LParen",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Minus",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Modulo",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Number",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Plus",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType RParen",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Seperator",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Slash",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Sqrt",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType Star",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field BenScr.Math.Parser.TokenType String",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.TokenType",
+      "legacy_member": "Field Int32 value__",
+      "target_type": "BenScr.MathParser.TokenType",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Constructor Void .ctor(BenScr.Math.Parser.TokenType, BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method BenScr.Math.Parser.Expr get_Right()",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method BenScr.Math.Parser.TokenType get_Op()",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method BenScr.Math.Parser.UnaryExpr <Clone>$()",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.UnaryExpr)",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method Boolean Equals(System.Object)",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method Boolean op_Equality(BenScr.Math.Parser.UnaryExpr, BenScr.Math.Parser.UnaryExpr)",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method Boolean op_Inequality(BenScr.Math.Parser.UnaryExpr, BenScr.Math.Parser.UnaryExpr)",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method Int32 GetHashCode()",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method Void Deconstruct(BenScr.Math.Parser.TokenType ByRef, BenScr.Math.Parser.Expr ByRef)",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method Void set_Op(BenScr.Math.Parser.TokenType)",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Method Void set_Right(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Property BenScr.Math.Parser.Expr Right",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.UnaryExpr",
+      "legacy_member": "Property BenScr.Math.Parser.TokenType Op",
+      "target_type": "BenScr.MathParser.UnaryExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Value",
+      "legacy_member": "Constructor Void .ctor(System.Object)",
+      "target_type": "BenScr.MathParser.Value",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Value",
+      "legacy_member": "Field BenScr.Math.Parser.Value Null",
+      "target_type": "BenScr.MathParser.Value",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Value",
+      "legacy_member": "Method System.Object get_Object()",
+      "target_type": "BenScr.MathParser.Value",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Value",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.Value",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Value",
+      "legacy_member": "Method T To[T]()",
+      "target_type": "BenScr.MathParser.Value",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.Value",
+      "legacy_member": "Property System.Object Object",
+      "target_type": "BenScr.MathParser.Value",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Constructor Void .ctor(System.String)",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method BenScr.Math.Parser.VarExpr <Clone>$()",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.Expr)",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method Boolean Equals(BenScr.Math.Parser.VarExpr)",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method Boolean Equals(System.Object)",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method Boolean op_Equality(BenScr.Math.Parser.VarExpr, BenScr.Math.Parser.VarExpr)",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method Boolean op_Inequality(BenScr.Math.Parser.VarExpr, BenScr.Math.Parser.VarExpr)",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method Int32 GetHashCode()",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method System.String ToString()",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method System.String get_Name()",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method Void Deconstruct(System.String ByRef)",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Method Void set_Name(System.String)",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    },
+    {
+      "legacy_type": "BenScr.Math.Parser.VarExpr",
+      "legacy_member": "Property System.String Name",
+      "target_type": "BenScr.MathParser.VarExpr",
+      "disposition": "retained_with_namespace_change"
+    }
+  ]
+}
