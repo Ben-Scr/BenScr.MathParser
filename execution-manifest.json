@@ -35,7 +35,7 @@
     "unchanged": true
   },
   "instructions": "../../AGENTS.md (central BenScr root; no per-library copy)",
-  "status": "published_verification_pending",
+  "status": "published_verified",
   "initial_tests": {
     "net9": 101,
     "net10": 101,
@@ -52,7 +52,11 @@
     "github_artifact_hashes_verified": true,
     "method": "NuGet web upload under ben.scr",
     "symbols_submitted": true,
-    "public_feed_consumer": "pending_indexing",
+    "public_feed_consumer": "passed_net9.0_and_net10.0_with_empty_cache",
+    "published_payloads_match_verified_archive": true,
+    "nuget_repository_signature": "verified",
+    "public_symbols": "downloaded_and_sha256_verified_for_both_frameworks",
+    "nuget_gallery_icon": "visually_verified_after_indexing",
     "interactive_debugger_stepping": "not_executed",
     "ci_url": "https://github.com/Ben-Scr/BenScr.MathParser/actions/runs/41497373390",
     "ci_platforms_passed": ["windows-latest", "ubuntu-latest"]

@@ -1,7 +1,8 @@
 # Release 1.0.0
 
 The user subsequently requested publication. On 2026-11-02, the exact verified package and symbols were
-submitted to NuGet under ben.scr. NuGet validation and indexing are pending.
+published to NuGet under ben.scr. Validation, indexing and public-consumer verification are complete:
+status `published_verified`.
 
 - Package: https://www.nuget.org/packages/BenScr.MathParser/1.0.0
 - Source commit: 50779d5071e0ef4c0ca9c147d0c097cf18d01e9f
@@ -66,7 +67,15 @@ NuGet submission and indexing are separate states. After indexing:
    and CI URLs, and change the release record to published_verified only after these checks succeed.
    Record interactive debugger stepping separately if it is performed.
 
-Submission has been confirmed on the package page. Public-feed consumer verification is pending indexing.
+The public-feed check passed on 2026-11-02 using a new temporary project outside the repository and an
+empty package cache, with nuget.org as the sole source. All eight consumer scenarios passed on net9.0
+and net10.0. The fetched nuspec, original license, README, icon, assemblies and XML documentation match
+the verified archive byte-for-byte. NuGet's repository signature passed `dotnet nuget verify --all`.
+
+Both portable PDBs were downloaded from NuGet's public symbol server and match the uploaded symbols.
+Their assembly identities and Source Link checksums were audited; all twelve source URLs resolve to
+the frozen release commit. Interactive debugger stepping was not executed.
+The NuGet gallery completed indexing, and the rendered original BenScr icon was visually verified.
 
 The earlier v1.0.0 and nuget/v1.0.0 tags are preserved as validation candidates. Fresh CI runners found
 that isolated consumer restore also needs Microsoft reference packs, including WindowsDesktop on Windows. The corrected release is tagged packages/BenScr.MathParser/1.0.0;

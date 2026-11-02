@@ -105,6 +105,8 @@ Use -ReleaseTag packages/BenScr.MathParser/1.0.0 for a tagged release candidate.
 
 Windows and Ubuntu x64 passed [release CI](https://github.com/Ben-Scr/BenScr.MathParser/actions/runs/41497373390),
 including 101 tests per framework and isolated package consumers.
+The published 1.0.0 package also passed fresh consumer execution from nuget.org on .NET 9 and .NET 10;
+public symbol downloads match the verified portable PDBs.
 Other operating systems/architectures, trimming and native AOT are not release-tested promises.
 
 ## Release and provenance

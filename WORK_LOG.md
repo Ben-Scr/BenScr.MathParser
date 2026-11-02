@@ -43,7 +43,16 @@ The final release tag is packages/BenScr.MathParser/1.0.0; earlier validation ta
 Publication: authenticated by the user as ben.scr in NuGet, then submitted the exact nupkg and snupkg
 from artifacts/final. Both web uploads were confirmed successful. No API key was created or stored,
 and no Trusted Publishing policy was configured. NuGet validation/indexing and the public-feed consumer
-check are pending. The release commit is 50779d5071e0ef4c0ca9c147d0c097cf18d01e9f; successful CI on
+check were initially pending. The release commit is 50779d5071e0ef4c0ca9c147d0c097cf18d01e9f; successful CI on
 Windows and Ubuntu is https://github.com/Ben-Scr/BenScr.MathParser/actions/runs/41497373390.
 The GitHub release for the existing final tag contains the exact nupkg and snupkg plus a release manifest
 without local machine paths. GitHub's asset SHA-256 digests match the local verified archives.
+
+Public-feed verification: a new outside-repository consumer restored only from nuget.org with a unique,
+empty package cache. All eight example scenarios passed on net9.0 and net10.0. All eight relevant
+archive payloads match the locally verified release, and NuGet's repository signature verifies.
+Both framework PDBs downloaded from NuGet's public symbol server match the verified symbol archive.
+Interactive debugger stepping was not executed. Gallery indexing subsequently completed; visual inspection
+confirmed the original icon on the public package page. The saved screenshot and local verification evidence
+are in artifacts/final; the public release manifest excludes local machine paths.
+Final status: published_verified. Released package bytes and the source tag were not changed.
